@@ -1,0 +1,17 @@
+<div class="section gr-form-group">
+  <h5 class="section-heading">Image Options</h5>
+  <div class="gf-form">
+    <label class="gf-form-label width-6">Set Image</label>
+    <input type="text" class="gf-form-input max-width-11" ng-model="ctrl.panel.image" ng-change="ctrl.render()" ng-model-onblur>
+  </div>
+  <div class="gf-form">
+    <input type="submit" class="gf-form-btn max-width-26" value = "     Add image     "  ng-click="ctrl.addImageToList(ctrl.panel.image)">
+      <input type="submit" class="gf-form-btn max-width-26" value = "   Remove image   "  ng-click="ctrl.removeImageFromList(ctrl.panel.image)">
+  </div>
+  <div class="gf-form">
+    <label class="gf-form-label width-6">Defaults</label>
+    <div class="gf-form-select-wrapper max-width-11">
+      <select class="input-small gf-form-input" ng-model="ctrl.panel.image" ng-options="t for t in ctrl.panel.images" ng-change="ctrl.render()"></select>
+    </div>
+  </div>
+</div>
